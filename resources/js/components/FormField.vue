@@ -60,13 +60,13 @@
                 this.options.data = this.field.options.map(option => {
                     if (this.options.optgroup) {
                         option.children.map(children => {
-                            children.selected = this.options.multiple ? this.value.indexOf(children.id) !== -1 : this.value === children.id
+                            children.selected = this.options.multiple ? this.value.indexOf(children.id) != -1 : this.value == children.id
 
                             return children
                         })
                     }
 
-                    option.selected = this.options.multiple ? this.value.indexOf(option.id) !== -1 : this.value === option.id
+                    option.selected = this.options.multiple ? this.value.indexOf(option.id) != -1 : this.value == option.id
 
                     return option
                 })
